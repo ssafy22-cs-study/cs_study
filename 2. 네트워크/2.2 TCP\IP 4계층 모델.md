@@ -35,21 +35,23 @@
 - **연결 지향 프로토콜** → 연결의 신뢰성 구축
 - 패킷 사이의 순서 보장
 - 가상회선(Virtual Circuit) 패킷 교환 방식
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9ecbaf33-005e-4e7d-b099-9e92940d8dec/Untitled.png)
+
+    ![Untitled](https://github.com/ssafy22-cs-study/cs_study/assets/52269983/43589aa3-16e3-40df-aac1-1de5c87ffce5)
     
     - 특정 경로인 가상회선 등록
     - 각 패킷에 가상회선 식별자가 포함되고, **전송된 순서대로** 도착함
     - 모든 패킷을 전송하면 가상회선 해제
 - TCP에서의 신뢰성 확보 과정
     - 3-way handshake : 연결 수립
-        
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a2711a3c-e4ac-4b64-94f4-d19500f7ed15/Untitled.png)
+    
+        ![Untitled](https://github.com/ssafy22-cs-study/cs_study/assets/52269983/62362d3c-c243-46df-823a-ae99d3698d23)
+
         
         - SYN(클라) ⇒ SYN + ACK(서버) ⇒ ACK(클라)
     - 4-way handshake : 연결 해제
-        
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8a6607d9-45bd-4ff5-868b-41510dbfb5e7/Untitled.png)
+
+
+      ![Untitled](https://github.com/ssafy22-cs-study/cs_study/assets/52269983/430bbf3c-3ffe-4ba0-b1ec-34555ad0f932)
         
         - FIN(클라) ⇒ ACK(서버) ⇒ FIN(서버) ⇒ (TIME_WAIT 후) ACK(클라)
         - TIME_WAIT : 소켓이 바로 소멸되지 않고 일정시간 유지되는 상태
@@ -60,8 +62,9 @@
 > 
 - 단순히 데이터만 주므로 신뢰성 낮음
 - 데이터그램 패킷 교환 방식
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d25174e5-245c-4946-b256-7bcf35ccd1ef/Untitled.png)
+
+    ![Untitled](https://github.com/ssafy22-cs-study/cs_study/assets/52269983/aac9a360-85de-4a30-a1b1-221ffd1d39fc)
+
     
 
 # 인터넷 계층
@@ -87,12 +90,13 @@
     - 데이터를 보낸 이후 충돌이 발생하면 일정 시간 이후 재전송
 - **유선 LAN을 이루는 케이블**
     - TP(Twisted Pair) 케이블
-        
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/757e87f1-ba58-47c7-a2e8-08130359ccf1/Untitled.png)
+
+       <img width="189" src="https://github.com/ssafy22-cs-study/cs_study/assets/52269983/1ba31ffb-02ae-48a1-9e07-8659bd6ad87a">
         
         - 여덟 개의 구리선을 두 개씩 꼬아서 묶은 케이블
-            
-            ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ae9de577-e2cb-40f0-aff3-61bcf5923139/Untitled.png)
+          
+          <img width="479" alt="스크린샷 2023-08-27 오후 9 18 38" src="https://github.com/ssafy22-cs-study/cs_study/assets/52269983/e5f95f2a-1ce5-4892-989b-7456785e8800">
+
             
         - UTP 케이블 : 구리선을 실드처리하지 않고 덮음(흔히 보는 랜선), RJ-45 커넥터
         - STP 케이블 : 실드 처리하고 덮음
@@ -137,8 +141,8 @@
 > **이더넷 프레임**
 > 
 - 데이터 링크 계층에서 사용하는 캡슐화된 구조
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a6b1358c-bc6f-47c7-9311-49c9ebb6b0f0/Untitled.png)
+
+    ![Untitled](https://github.com/ssafy22-cs-study/cs_study/assets/52269983/d26b2488-6845-4608-bbf2-2ddcb93fdd09)
     
 - Preamble : 7byte
     - 이더넷 프레임의 시작임을 표시
@@ -166,7 +170,9 @@
 > HTTP를 통해 웹 서버에 있는 데이터를 요청한다면?
 > 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9b851f02-0880-4973-95c5-e3edcfbd522f/Untitled.png)
+
+![Untitled](https://github.com/ssafy22-cs-study/cs_study/assets/52269983/d5913c1e-76dc-4cc6-9b4d-f1e26563e138)
+
 
 1. 클라이언트의 request가 캡슐화 과정을 거쳐 애플리케이션 계층 → 링크 계층으로 내려감
 2. 링크 계층을 통해 서버와 통신함
@@ -176,7 +182,7 @@
 > 캡슐화 과정
 > 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/38d51283-d3fe-4f2a-bf0e-2b6eca8b97a7/Untitled.png)
+![Untitled](https://github.com/ssafy22-cs-study/cs_study/assets/52269983/2184a0bd-3623-406f-a144-e716c03f0397)
 
 - 상위 계층의 헤더를 하위 계층의 데이터 부분에 포함시키고 해당 계층의 헤더를 삽입함
 1. 애플리케이션 → 전송
