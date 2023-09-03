@@ -36,8 +36,7 @@
 - 패킷 사이의 순서 보장
 - 가상회선(Virtual Circuit) 패킷 교환 방식
 
-    ![Untitled](https://github.com/ssafy22-cs-study/cs_study/assets/52269983/43589aa3-16e3-40df-aac1-1de5c87ffce5)
-    
+    ![Untitled](https://github.com/ssafy22-cs-study/cs_study/assets/28949163/be3d408d-5e44-4379-8c76-3a8e7dca1ca0)
     - 특정 경로인 가상회선 등록
     - 각 패킷에 가상회선 식별자가 포함되고, **전송된 순서대로** 도착함
     - 모든 패킷을 전송하면 가상회선 해제
